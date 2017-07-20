@@ -1,4 +1,4 @@
-(ns org.modules)
+(ns org.modules.cljs-base)
 
 (require '[cljs.repl :as r])
 (require '[cljs.build.api :as b])
@@ -12,8 +12,8 @@
    :preloads '[org.modules.preloads.dev]
    :modules {:core {:entries '#{org.modules.core}
                     :output-to "out/modules.js"}
-             :time {:entries '#{org.modules.time}
-                    :output-to "out/time.js"}}
+             :menu {:entries '#{org.modules.menu}
+                    :output-to "out/menu.js"}}
    :browser-repl true
    :verbose true})
 
