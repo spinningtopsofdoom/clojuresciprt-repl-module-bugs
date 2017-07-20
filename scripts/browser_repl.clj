@@ -11,7 +11,7 @@
    :optimizations :none
    :preloads '[org.modules.preloads.dev]
    :modules {:core {:entries '#{org.modules.core}
-                    :output-to "out/clicker.js"
+                    :output-to "out/modules.js"
                     :depends-on []}
              :time {:entries '#{org.modules.time}
                     :output-to "out/time.js"}}

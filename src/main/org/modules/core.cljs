@@ -4,4 +4,4 @@
 (loader/load
   :time
   (fn []
-    ((resolve 'clicker.time/display-game-time) 100)))
+    ((resolve 'org.modules.time/display-time) 100)))
