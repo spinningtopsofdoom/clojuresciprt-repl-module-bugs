@@ -11,8 +11,7 @@
    :optimizations :none
    :preloads '[org.modules.preloads.dev]
    :modules {:core {:entries '#{org.modules.core}
-                    :output-to "out/modules.js"
-                    :depends-on []}
+                    :output-to "out/modules.js"}
              :time {:entries '#{org.modules.time}
                     :output-to "out/time.js"}}
    :browser-repl true
