@@ -36,6 +36,8 @@ at the end of the `:core` module. By then it's too late, the `:menu` module has 
 
 This is only a problem in the REPL due to the `:cljs-base` module being loaded through `document.write`.
 
+Run `./scripts/run_cljs_base_race.sh` and open `http://localhost:9000/` once the repl starts to see the bug
+
 ## Library namespaces loading before their dependencies
 
 Loading ClojureScript module that has library dependencies will fail due to the library namespaces loading before their dependencies.
@@ -71,3 +73,5 @@ and this code
 ```
 
 When the `:time` module is loaded the `cljs-time.core` is loaded, but any dependencies it may have (e.g. `cljs-time.core.internal`) are loaded afterwards causing the loading of the `:time` module to fail. After a backoff delay (around 5 seconds) the Google Closure Module Manager retries loading the `:time` module, this time successfully. Until the `:time` module is loaded successfully all module loading is subject to this backoff delay.
+
+Run `./scripts/run_transitive_dependencies.sh` and open `http://localhost:9000/` once the repl starts to see the bug
